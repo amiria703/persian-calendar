@@ -15,7 +15,7 @@ import io.github.persiancalendar.praytimes.PrayTimes
 
 class TimesFlow(context: Context, attrs: AttributeSet? = null) : Flow(context, attrs) {
 
-    private var times = emptyList<Pair<@StringRes Int, TimeItemBinding>>()
+    private var times = emptyList<Pair<Int, TimeItemBinding>>()
     fun setup() {
         times =
             getTimeNames().map { name -> name to TimeItemBinding.inflate(context.layoutInflater) }

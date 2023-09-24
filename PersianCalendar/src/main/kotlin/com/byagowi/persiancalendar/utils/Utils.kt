@@ -49,7 +49,7 @@ val logException = fun(e: Throwable) { Log.e(LOG_TAG, "Handled Exception", e) }
 
 // Thee same order as http://praytimes.org/code/v2/js/examples/monthly.htm
 val CalculationMethod.titleStringId
-    get(): @StringRes Int = when (this) {
+    get(): Int = when (this) {
         CalculationMethod.MWL -> R.string.method_mwl
         CalculationMethod.ISNA -> R.string.method_isna
         CalculationMethod.Egypt -> R.string.method_egypt
@@ -65,7 +65,7 @@ val enableHighLatitudesConfiguration: Boolean
     get() = coordinates.value?.let { abs(it.latitude) > 50 } ?: false
 
 val HighLatitudesMethod.titleStringId
-    get(): @StringRes Int = when (this) {
+    get(): Int = when (this) {
         HighLatitudesMethod.NightMiddle -> R.string.high_latitudes_night_middle
         HighLatitudesMethod.AngleBased -> R.string.high_latitudes_angle_based
         HighLatitudesMethod.OneSeventh -> R.string.high_latitudes_one_seventh
